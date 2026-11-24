@@ -1,0 +1,330 @@
+{
+  "format": "KAZEOSAT_90D_FIVE_DESIGN_RESEARCH_INTENT_V1",
+  "status": "INTENT_NOT_COMPILED_NOT_EXECUTED",
+  "scope": {
+    "duration_seconds": 7776000,
+    "days_of_86400_seconds": 90,
+    "initial_anchor_seconds": 128,
+    "target_seconds": 7776128,
+    "design_count": 5,
+    "maximum_parallel_workers": 5,
+    "default_interactive_target": 2,
+    "quiet_target": 5
+  },
+  "provenance": {
+    "classification": "ASSUMED_RESEARCH_ASSEMBLIES_NOT_FLIGHT_HARDWARE",
+    "module_origin": "Existing b66_common_initial seed; source declarations must be rechecked by genuine compiler before freeze",
+    "no_solid_cad_or_flight_certificate": true
+  },
+  "common_modules": {
+    "battery": {
+      "mass_kg": 1,
+      "capacity_wh": 50,
+      "size_m": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "electrical_bank": "IDENTICAL_PARALLEL_COMMON_SOC_AND_TEMPERATURE",
+      "port_and_ageing": "Keep exact admitted seed module laws and coefficients; no independent invented vendor data"
+    },
+    "pv": {
+      "mass_kg": 0.4,
+      "nameplate_w": 25,
+      "size_m": [
+        0.1,
+        0.6,
+        0.05
+      ],
+      "orientations": "All co-oriented; preserve seed effective body-frame panel normal and per-module efficiency/rating"
+    },
+    "camera": {
+      "mass_kg": 0.2,
+      "size_m": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "orientation": "Same effective body-frame optical normal, payload and RF service in all designs"
+    }
+  },
+  "designs": [
+    {
+      "id": "D1_BALANCED",
+      "core": {
+        "mass_kg": 4,
+        "size_m": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "position_m": [
+          0,
+          0,
+          0
+        ]
+      },
+      "battery_positions_m": [
+        [
+          -0.18,
+          0,
+          0
+        ],
+        [
+          0.18,
+          0,
+          0
+        ]
+      ],
+      "camera_position_m": [
+        0,
+        0.18,
+        0
+      ],
+      "pv_positions_m": [
+        [
+          -0.12,
+          -0.45,
+          0
+        ],
+        [
+          0.12,
+          -0.45,
+          0
+        ]
+      ],
+      "nominal_battery_wh": 100,
+      "nominal_pv_w": 50,
+      "expected_part_mass_before_harness_kg": 7
+    },
+    {
+      "id": "D2_LIGHT",
+      "core": {
+        "mass_kg": 2.5,
+        "size_m": [
+          0.16,
+          0.16,
+          0.16
+        ],
+        "position_m": [
+          0,
+          0,
+          0
+        ]
+      },
+      "battery_positions_m": [
+        [
+          0.15,
+          0,
+          0
+        ]
+      ],
+      "camera_position_m": [
+        0,
+        0.16,
+        0
+      ],
+      "pv_positions_m": [
+        [
+          0,
+          -0.4,
+          0
+        ]
+      ],
+      "nominal_battery_wh": 50,
+      "nominal_pv_w": 25,
+      "expected_part_mass_before_harness_kg": 4.1
+    },
+    {
+      "id": "D3_ENERGY",
+      "core": {
+        "mass_kg": 4.8,
+        "size_m": [
+          0.3,
+          0.25,
+          0.2
+        ],
+        "position_m": [
+          0,
+          0,
+          0
+        ]
+      },
+      "battery_positions_m": [
+        [
+          -0.24,
+          -0.16,
+          0
+        ],
+        [
+          -0.24,
+          0.16,
+          0
+        ],
+        [
+          0.24,
+          -0.16,
+          0
+        ],
+        [
+          0.24,
+          0.16,
+          0
+        ]
+      ],
+      "camera_position_m": [
+        0,
+        0.23,
+        0
+      ],
+      "pv_positions_m": [
+        [
+          -0.36,
+          -0.5,
+          0
+        ],
+        [
+          -0.12,
+          -0.5,
+          0
+        ],
+        [
+          0.12,
+          -0.5,
+          0
+        ],
+        [
+          0.36,
+          -0.5,
+          0
+        ]
+      ],
+      "nominal_battery_wh": 200,
+      "nominal_pv_w": 100,
+      "expected_part_mass_before_harness_kg": 10.6
+    },
+    {
+      "id": "D4_OUTBOARD",
+      "core": {
+        "mass_kg": 4,
+        "size_m": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "position_m": [
+          0,
+          0,
+          0
+        ]
+      },
+      "battery_positions_m": [
+        [
+          -0.55,
+          0,
+          0
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "camera_position_m": [
+        0,
+        0.18,
+        0
+      ],
+      "pv_positions_m": [
+        [
+          -0.12,
+          -0.45,
+          0
+        ],
+        [
+          0.12,
+          -0.45,
+          0
+        ]
+      ],
+      "nominal_battery_wh": 100,
+      "nominal_pv_w": 50,
+      "expected_part_mass_before_harness_kg": 7,
+      "control_pair": "D1_BALANCED; only battery placement and necessarily derived wire geometry/mass change"
+    },
+    {
+      "id": "D5_ELONGATED",
+      "core": {
+        "mass_kg": 4,
+        "size_m": [
+          0.4,
+          0.2,
+          0.1
+        ],
+        "position_m": [
+          0,
+          0,
+          0
+        ]
+      },
+      "battery_positions_m": [
+        [
+          -0.28,
+          0,
+          0
+        ],
+        [
+          0.28,
+          0,
+          0
+        ]
+      ],
+      "camera_position_m": [
+        0.3,
+        0.12,
+        0
+      ],
+      "pv_positions_m": [
+        [
+          -0.23,
+          -0.45,
+          0
+        ],
+        [
+          0.23,
+          -0.45,
+          0
+        ]
+      ],
+      "nominal_battery_wh": 100,
+      "nominal_pv_w": 50,
+      "expected_part_mass_before_harness_kg": 7
+    }
+  ],
+  "common_rules": [
+    "CORE/equipment block is a physical uniform cuboid mass carrier, not an empty outer bus. Overall spacecraft extents are derived from all installed components.",
+    "Mount/envelope/collision admission is mandatory; only geometry-refusal repairs before science freeze, with intent diff and no outcome tuning.",
+    "Support/equipment mass covered once by declared CORE lump; no free additional structures, fabricated shell or false FEM/strength claim.",
+    "Same orbit, calendar/Sun phase, requests, contact assumptions, controller, actuator, camera, RF service, initial SOC fraction and temperatures for all designs.",
+    "Same conductor material, cross-section, connector and slack rules; transform genuine local ports and author routes before any mission result.",
+    "Retain supported existing thermal nodes and declared contact graph; disclose fixed external forcing. Position alone does not create thermal conductance or shadowing.",
+    "Recompute part mass*cp, declared exposed areas/emissivity, route mass*cp and wire heat using existing exact owners. No fictitious compensating cp.",
+    "Use normal existing ASSUMED ageing, not accelerated ageing presented as reality. Preserve and report actual inherited coefficients.",
+    "D1/D4 is the placement control; other variants compare entire engineering configurations and do not isolate a single cause.",
+    "Zero credit or a physical failure is a valid design outcome. Do not tune hardware, guards or initial energy after results to manufacture winners.",
+    "Full 90-day jobs remain source/root/policy bound. Runtime concurrency changes do not alter physical inputs, reset work, or migrate checkpoints."
+  ],
+  "outputs": [
+    "actual acquired and delivered bits/products",
+    "on-time credits and priority score",
+    "expired requests and typed actual refusals",
+    "minimum/final energy and selected unmet load",
+    "terminal voltage/current extrema where genuinely recorded",
+    "maximum node temperatures",
+    "wire losses and battery/PV degradation",
+    "part/harness/total mass, COM and full inertia tensor",
+    "three 30-day summaries and final comparison",
+    "runtime CPU/wall/RSS/disk and exact restart/continuation evidence"
+  ],
+  "no_execution_by_this_file": true
+}

@@ -1,0 +1,1817 @@
+{
+  "purpose": "Arbitrary saved local numerical set; NOT a checkpoint, continuation authority or H5 coverage.",
+  "archive_sha256": "516c70384dd94c0eeb322f06d93fd9768c0938418fc1114471ac57aff48786bb",
+  "result_member": "runs/slot1-H5-full/result.json",
+  "result_sha256": "a0ac2a8c910e886c8f75223e31e0ebd83861bf3d801742acf6e0419db398055f",
+  "input_member": "inputs/H5.json",
+  "input_sha256": "ce3503bb4284eb1d271cf48fd8a9fa5e11c1f2ae34db051583844c7dfa4dbc68",
+  "h5_input_document": {
+    "canonical_version": 1,
+    "digest": "03ed54acb1f229b744c32e7a37985a1a2e5684eaf9a8d94908a0d93700c0d587",
+    "format": "M2_LOCAL_ILLUMINATION_REQUEST",
+    "inputs": {
+      "items": [
+        [
+          "coast",
+          {
+            "fields": {
+              "binding_version": {
+                "kind": "int",
+                "value": "1"
+              },
+              "enclosure_policy": {
+                "fields": {
+                  "max_picard_iterations": {
+                    "kind": "int",
+                    "value": "12"
+                  },
+                  "max_steps": {
+                    "kind": "int",
+                    "value": "4096"
+                  },
+                  "min_radius_m": {
+                    "kind": "float",
+                    "value": "0x1.6e36000000000p+22"
+                  },
+                  "precision_digits": {
+                    "kind": "int",
+                    "value": "50"
+                  },
+                  "step_seconds": {
+                    "kind": "float",
+                    "value": "0x1.4000000000000p+2"
+                  }
+                },
+                "kind": "record",
+                "type": "ops_sim.v5.orbit_j2_enclosure.J2EnclosurePolicy"
+              },
+              "model": {
+                "kind": "str",
+                "value": "v56f-static-axis-cartesian-j2"
+              },
+              "policy_version": {
+                "kind": "int",
+                "value": "1"
+              },
+              "representation_version": {
+                "kind": "int",
+                "value": "1"
+              },
+              "solver_config": {
+                "fields": {
+                  "max_steps": {
+                    "kind": "int",
+                    "value": "32"
+                  },
+                  "step_seconds": {
+                    "kind": "float",
+                    "value": "0x1.4000000000000p+3"
+                  }
+                },
+                "kind": "record",
+                "type": "ops_sim.v5.orbit_j2.J2RK4SolverConfig"
+              },
+              "trajectory": {
+                "fields": {
+                  "gravity_model": {
+                    "fields": {
+                      "gravitational_parameter_m3_s2": {
+                        "fields": {
+                          "provenance": {
+                            "fields": {
+                              "classification": {
+                                "kind": "enum",
+                                "member": "EXPLICIT_MODEL_ASSUMPTION",
+                                "type": "ops_sim.v5.provenance.ProvenanceClass"
+                              },
+                              "derivation": {
+                                "kind": "none"
+                              },
+                              "parameter_id": {
+                                "fields": {
+                                  "value": {
+                                    "kind": "str",
+                                    "value": "orbit.gravity.gravitational-parameter"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.ids.ParameterId"
+                              },
+                              "rationale": {
+                                "kind": "str",
+                                "value": "Synthetic Task 06A enclosure pilot input"
+                              },
+                              "sensitivity_range": {
+                                "kind": "none"
+                              },
+                              "source_ids": {
+                                "items": [],
+                                "kind": "tuple"
+                              },
+                              "status": {
+                                "kind": "enum",
+                                "member": "VERIFIED",
+                                "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                              },
+                              "units": {
+                                "kind": "str",
+                                "value": "m^3/s^2"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.provenance.ParameterProvenance"
+                          },
+                          "value": {
+                            "kind": "float",
+                            "value": "0x1.6bcc41e900000p+48"
+                          }
+                        },
+                        "kind": "record",
+                        "type": "ops_sim.v5.parameters.ScalarParameter"
+                      },
+                      "j2": {
+                        "fields": {
+                          "provenance": {
+                            "fields": {
+                              "classification": {
+                                "kind": "enum",
+                                "member": "EXPLICIT_MODEL_ASSUMPTION",
+                                "type": "ops_sim.v5.provenance.ProvenanceClass"
+                              },
+                              "derivation": {
+                                "kind": "none"
+                              },
+                              "parameter_id": {
+                                "fields": {
+                                  "value": {
+                                    "kind": "str",
+                                    "value": "orbit.gravity.j2"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.ids.ParameterId"
+                              },
+                              "rationale": {
+                                "kind": "str",
+                                "value": "Synthetic Task 06A enclosure pilot input"
+                              },
+                              "sensitivity_range": {
+                                "kind": "none"
+                              },
+                              "source_ids": {
+                                "items": [],
+                                "kind": "tuple"
+                              },
+                              "status": {
+                                "kind": "enum",
+                                "member": "VERIFIED",
+                                "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                              },
+                              "units": {
+                                "kind": "str",
+                                "value": "1"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.provenance.ParameterProvenance"
+                          },
+                          "value": {
+                            "kind": "float",
+                            "value": "0x1.0000000000000p-10"
+                          }
+                        },
+                        "kind": "record",
+                        "type": "ops_sim.v5.parameters.ScalarParameter"
+                      },
+                      "reference_radius_m": {
+                        "fields": {
+                          "provenance": {
+                            "fields": {
+                              "classification": {
+                                "kind": "enum",
+                                "member": "EXPLICIT_MODEL_ASSUMPTION",
+                                "type": "ops_sim.v5.provenance.ProvenanceClass"
+                              },
+                              "derivation": {
+                                "kind": "none"
+                              },
+                              "parameter_id": {
+                                "fields": {
+                                  "value": {
+                                    "kind": "str",
+                                    "value": "orbit.gravity.reference-radius"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.ids.ParameterId"
+                              },
+                              "rationale": {
+                                "kind": "str",
+                                "value": "Synthetic Task 06A enclosure pilot input"
+                              },
+                              "sensitivity_range": {
+                                "kind": "none"
+                              },
+                              "source_ids": {
+                                "items": [],
+                                "kind": "tuple"
+                              },
+                              "status": {
+                                "kind": "enum",
+                                "member": "VERIFIED",
+                                "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                              },
+                              "units": {
+                                "kind": "str",
+                                "value": "m"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.provenance.ParameterProvenance"
+                          },
+                          "value": {
+                            "kind": "float",
+                            "value": "0x1.86a0000000000p+22"
+                          }
+                        },
+                        "kind": "record",
+                        "type": "ops_sim.v5.parameters.ScalarParameter"
+                      }
+                    },
+                    "kind": "record",
+                    "type": "ops_sim.v5.orbit_j2_gravity.J2GravityModel"
+                  },
+                  "initial_state": {
+                    "fields": {
+                      "position": {
+                        "fields": {
+                          "components_m": {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "0x1.ab3f000000000p+22"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "0x1.86a0000000000p+16"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "0x1.86a0000000000p+17"
+                              }
+                            ],
+                            "kind": "tuple"
+                          },
+                          "frame": {
+                            "fields": {
+                              "ellipsoid": {
+                                "fields": {
+                                  "equatorial_radius_m": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "PUBLIC_SPECIFICATION",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "none"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.earth.equatorial-radius"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "none"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [
+                                              {
+                                                "fields": {
+                                                  "value": {
+                                                    "kind": "str",
+                                                    "value": "nga-wgs84-defining-parameters"
+                                                  }
+                                                },
+                                                "kind": "record",
+                                                "type": "ops_sim.v5.ids.SourceRecordId"
+                                              }
+                                            ],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "m"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x1.854a640000000p+22"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  },
+                                  "flattening": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "DERIVED_VALUE",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "str",
+                                            "value": "f = 1 / 298.257223563 from NGA reciprocal flattening"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.earth.flattening"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "none"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [
+                                              {
+                                                "fields": {
+                                                  "value": {
+                                                    "kind": "str",
+                                                    "value": "nga-wgs84-defining-parameters"
+                                                  }
+                                                },
+                                                "kind": "record",
+                                                "type": "ops_sim.v5.ids.SourceRecordId"
+                                              }
+                                            ],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "1"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x1.b775a84f3e128p-9"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  },
+                                  "name": {
+                                    "kind": "str",
+                                    "value": "WGS84"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.orbit_config.ReferenceEllipsoid"
+                              },
+                              "kind": {
+                                "kind": "enum",
+                                "member": "MODEL_INERTIAL",
+                                "type": "ops_sim.v5.orbit_config.FrameKind"
+                              },
+                              "rotation": {
+                                "fields": {
+                                  "angular_velocity_rad_per_s": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "PUBLIC_SPECIFICATION",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "none"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.rotation.angular-rate"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "none"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [
+                                              {
+                                                "fields": {
+                                                  "value": {
+                                                    "kind": "str",
+                                                    "value": "nga-wgs84-defining-parameters"
+                                                  }
+                                                },
+                                                "kind": "record",
+                                                "type": "ops_sim.v5.ids.SourceRecordId"
+                                              }
+                                            ],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "rad/s"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x1.31da7d157db65p-14"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  },
+                                  "epoch": {
+                                    "fields": {
+                                      "fractional_day": {
+                                        "kind": "float",
+                                        "value": "0x1.0000000000000p-1"
+                                      },
+                                      "julian_day": {
+                                        "kind": "int",
+                                        "value": "2461314"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.orbit_config.TTEpoch"
+                                  },
+                                  "initial_phase_rad": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "EXPLICIT_MODEL_ASSUMPTION",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "none"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.rotation.initial-phase"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "str",
+                                            "value": "Synthetic Task 06A enclosure pilot input"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "rad"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x0.0p+0"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.orbit_config.UniformRotationDefinition"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.orbit_config.FrameDefinition"
+                          },
+                          "instant": {
+                            "fields": {
+                              "elapsed_seconds": {
+                                "kind": "float",
+                                "value": "0x1.0000000000000p+7"
+                              },
+                              "epoch": {
+                                "fields": {
+                                  "fractional_day": {
+                                    "kind": "float",
+                                    "value": "0x1.0000000000000p-1"
+                                  },
+                                  "julian_day": {
+                                    "kind": "int",
+                                    "value": "2461314"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.orbit_config.TTEpoch"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.orbit_config.GeometryInstant"
+                          }
+                        },
+                        "kind": "record",
+                        "type": "ops_sim.v5.frames.CartesianPosition"
+                      },
+                      "velocity": {
+                        "fields": {
+                          "components_m_per_s": {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.9000000000000p+6"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "0x1.7700000000000p+12"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "0x1.1940000000000p+12"
+                              }
+                            ],
+                            "kind": "tuple"
+                          },
+                          "frame": {
+                            "fields": {
+                              "ellipsoid": {
+                                "fields": {
+                                  "equatorial_radius_m": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "PUBLIC_SPECIFICATION",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "none"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.earth.equatorial-radius"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "none"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [
+                                              {
+                                                "fields": {
+                                                  "value": {
+                                                    "kind": "str",
+                                                    "value": "nga-wgs84-defining-parameters"
+                                                  }
+                                                },
+                                                "kind": "record",
+                                                "type": "ops_sim.v5.ids.SourceRecordId"
+                                              }
+                                            ],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "m"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x1.854a640000000p+22"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  },
+                                  "flattening": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "DERIVED_VALUE",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "str",
+                                            "value": "f = 1 / 298.257223563 from NGA reciprocal flattening"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.earth.flattening"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "none"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [
+                                              {
+                                                "fields": {
+                                                  "value": {
+                                                    "kind": "str",
+                                                    "value": "nga-wgs84-defining-parameters"
+                                                  }
+                                                },
+                                                "kind": "record",
+                                                "type": "ops_sim.v5.ids.SourceRecordId"
+                                              }
+                                            ],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "1"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x1.b775a84f3e128p-9"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  },
+                                  "name": {
+                                    "kind": "str",
+                                    "value": "WGS84"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.orbit_config.ReferenceEllipsoid"
+                              },
+                              "kind": {
+                                "kind": "enum",
+                                "member": "MODEL_INERTIAL",
+                                "type": "ops_sim.v5.orbit_config.FrameKind"
+                              },
+                              "rotation": {
+                                "fields": {
+                                  "angular_velocity_rad_per_s": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "PUBLIC_SPECIFICATION",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "none"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.rotation.angular-rate"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "none"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [
+                                              {
+                                                "fields": {
+                                                  "value": {
+                                                    "kind": "str",
+                                                    "value": "nga-wgs84-defining-parameters"
+                                                  }
+                                                },
+                                                "kind": "record",
+                                                "type": "ops_sim.v5.ids.SourceRecordId"
+                                              }
+                                            ],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "rad/s"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x1.31da7d157db65p-14"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  },
+                                  "epoch": {
+                                    "fields": {
+                                      "fractional_day": {
+                                        "kind": "float",
+                                        "value": "0x1.0000000000000p-1"
+                                      },
+                                      "julian_day": {
+                                        "kind": "int",
+                                        "value": "2461314"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.orbit_config.TTEpoch"
+                                  },
+                                  "initial_phase_rad": {
+                                    "fields": {
+                                      "provenance": {
+                                        "fields": {
+                                          "classification": {
+                                            "kind": "enum",
+                                            "member": "EXPLICIT_MODEL_ASSUMPTION",
+                                            "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                          },
+                                          "derivation": {
+                                            "kind": "none"
+                                          },
+                                          "parameter_id": {
+                                            "fields": {
+                                              "value": {
+                                                "kind": "str",
+                                                "value": "orbit.rotation.initial-phase"
+                                              }
+                                            },
+                                            "kind": "record",
+                                            "type": "ops_sim.v5.ids.ParameterId"
+                                          },
+                                          "rationale": {
+                                            "kind": "str",
+                                            "value": "Synthetic Task 06A enclosure pilot input"
+                                          },
+                                          "sensitivity_range": {
+                                            "kind": "none"
+                                          },
+                                          "source_ids": {
+                                            "items": [],
+                                            "kind": "tuple"
+                                          },
+                                          "status": {
+                                            "kind": "enum",
+                                            "member": "VERIFIED",
+                                            "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                          },
+                                          "units": {
+                                            "kind": "str",
+                                            "value": "rad"
+                                          }
+                                        },
+                                        "kind": "record",
+                                        "type": "ops_sim.v5.provenance.ParameterProvenance"
+                                      },
+                                      "value": {
+                                        "kind": "float",
+                                        "value": "0x0.0p+0"
+                                      }
+                                    },
+                                    "kind": "record",
+                                    "type": "ops_sim.v5.parameters.ScalarParameter"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.orbit_config.UniformRotationDefinition"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.orbit_config.FrameDefinition"
+                          },
+                          "instant": {
+                            "fields": {
+                              "elapsed_seconds": {
+                                "kind": "float",
+                                "value": "0x1.0000000000000p+7"
+                              },
+                              "epoch": {
+                                "fields": {
+                                  "fractional_day": {
+                                    "kind": "float",
+                                    "value": "0x1.0000000000000p-1"
+                                  },
+                                  "julian_day": {
+                                    "kind": "int",
+                                    "value": "2461314"
+                                  }
+                                },
+                                "kind": "record",
+                                "type": "ops_sim.v5.orbit_config.TTEpoch"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.orbit_config.GeometryInstant"
+                          }
+                        },
+                        "kind": "record",
+                        "type": "ops_sim.v5.frames.CartesianVelocity"
+                      }
+                    },
+                    "kind": "record",
+                    "type": "ops_sim.v5.frames.CartesianState"
+                  }
+                },
+                "kind": "record",
+                "type": "ops_sim.v5.orbit_j2.J2CartesianTrajectory"
+              }
+            },
+            "kind": "record",
+            "type": "ops_sim.v5.orbit_j2_binding.J2CoastOrbitInputs"
+          }
+        ],
+        [
+          "end",
+          {
+            "fields": {
+              "elapsed_seconds": {
+                "kind": "float",
+                "value": "0x1.1b40000000000p+14"
+              },
+              "epoch": {
+                "fields": {
+                  "fractional_day": {
+                    "kind": "float",
+                    "value": "0x1.0000000000000p-1"
+                  },
+                  "julian_day": {
+                    "kind": "int",
+                    "value": "2461314"
+                  }
+                },
+                "kind": "record",
+                "type": "ops_sim.v5.orbit_config.TTEpoch"
+              }
+            },
+            "kind": "record",
+            "type": "ops_sim.v5.orbit_config.GeometryInstant"
+          }
+        ],
+        [
+          "policy",
+          {
+            "items": [
+              [
+                "max_arithmetic_operations",
+                {
+                  "kind": "int",
+                  "value": "3100000"
+                }
+              ],
+              [
+                "max_geometry_cells",
+                {
+                  "kind": "int",
+                  "value": "6000"
+                }
+              ],
+              [
+                "max_integration_steps",
+                {
+                  "kind": "int",
+                  "value": "6000"
+                }
+              ],
+              [
+                "max_passes",
+                {
+                  "kind": "int",
+                  "value": "7"
+                }
+              ],
+              [
+                "max_picard_attempts",
+                {
+                  "kind": "int",
+                  "value": "72000"
+                }
+              ],
+              [
+                "max_retained_evidence_units",
+                {
+                  "kind": "int",
+                  "value": "262144"
+                }
+              ]
+            ],
+            "kind": "map"
+          }
+        ],
+        [
+          "requested_resolution_seconds",
+          {
+            "kind": "float",
+            "value": "0x1.0000000000000p+0"
+          }
+        ],
+        [
+          "start",
+          {
+            "fields": {
+              "elapsed_seconds": {
+                "kind": "float",
+                "value": "0x1.0000000000000p+7"
+              },
+              "epoch": {
+                "fields": {
+                  "fractional_day": {
+                    "kind": "float",
+                    "value": "0x1.0000000000000p-1"
+                  },
+                  "julian_day": {
+                    "kind": "int",
+                    "value": "2461314"
+                  }
+                },
+                "kind": "record",
+                "type": "ops_sim.v5.orbit_config.TTEpoch"
+              }
+            },
+            "kind": "record",
+            "type": "ops_sim.v5.orbit_config.GeometryInstant"
+          }
+        ],
+        [
+          "table",
+          {
+            "items": [
+              [
+                "domain_seconds",
+                {
+                  "items": [
+                    {
+                      "kind": "float",
+                      "value": "0x0.0p+0"
+                    },
+                    {
+                      "kind": "float",
+                      "value": "0x1.5180000000000p+14"
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              ],
+              [
+                "epoch",
+                {
+                  "fields": {
+                    "fractional_day": {
+                      "kind": "float",
+                      "value": "0x1.0000000000000p-1"
+                    },
+                    "julian_day": {
+                      "kind": "int",
+                      "value": "2461314"
+                    }
+                  },
+                  "kind": "record",
+                  "type": "ops_sim.v5.orbit_config.TTEpoch"
+                }
+              ],
+              [
+                "frame",
+                {
+                  "fields": {
+                    "ellipsoid": {
+                      "fields": {
+                        "equatorial_radius_m": {
+                          "fields": {
+                            "provenance": {
+                              "fields": {
+                                "classification": {
+                                  "kind": "enum",
+                                  "member": "PUBLIC_SPECIFICATION",
+                                  "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                },
+                                "derivation": {
+                                  "kind": "none"
+                                },
+                                "parameter_id": {
+                                  "fields": {
+                                    "value": {
+                                      "kind": "str",
+                                      "value": "orbit.earth.equatorial-radius"
+                                    }
+                                  },
+                                  "kind": "record",
+                                  "type": "ops_sim.v5.ids.ParameterId"
+                                },
+                                "rationale": {
+                                  "kind": "none"
+                                },
+                                "sensitivity_range": {
+                                  "kind": "none"
+                                },
+                                "source_ids": {
+                                  "items": [
+                                    {
+                                      "fields": {
+                                        "value": {
+                                          "kind": "str",
+                                          "value": "nga-wgs84-defining-parameters"
+                                        }
+                                      },
+                                      "kind": "record",
+                                      "type": "ops_sim.v5.ids.SourceRecordId"
+                                    }
+                                  ],
+                                  "kind": "tuple"
+                                },
+                                "status": {
+                                  "kind": "enum",
+                                  "member": "VERIFIED",
+                                  "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                },
+                                "units": {
+                                  "kind": "str",
+                                  "value": "m"
+                                }
+                              },
+                              "kind": "record",
+                              "type": "ops_sim.v5.provenance.ParameterProvenance"
+                            },
+                            "value": {
+                              "kind": "float",
+                              "value": "0x1.854a640000000p+22"
+                            }
+                          },
+                          "kind": "record",
+                          "type": "ops_sim.v5.parameters.ScalarParameter"
+                        },
+                        "flattening": {
+                          "fields": {
+                            "provenance": {
+                              "fields": {
+                                "classification": {
+                                  "kind": "enum",
+                                  "member": "DERIVED_VALUE",
+                                  "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                },
+                                "derivation": {
+                                  "kind": "str",
+                                  "value": "f = 1 / 298.257223563 from NGA reciprocal flattening"
+                                },
+                                "parameter_id": {
+                                  "fields": {
+                                    "value": {
+                                      "kind": "str",
+                                      "value": "orbit.earth.flattening"
+                                    }
+                                  },
+                                  "kind": "record",
+                                  "type": "ops_sim.v5.ids.ParameterId"
+                                },
+                                "rationale": {
+                                  "kind": "none"
+                                },
+                                "sensitivity_range": {
+                                  "kind": "none"
+                                },
+                                "source_ids": {
+                                  "items": [
+                                    {
+                                      "fields": {
+                                        "value": {
+                                          "kind": "str",
+                                          "value": "nga-wgs84-defining-parameters"
+                                        }
+                                      },
+                                      "kind": "record",
+                                      "type": "ops_sim.v5.ids.SourceRecordId"
+                                    }
+                                  ],
+                                  "kind": "tuple"
+                                },
+                                "status": {
+                                  "kind": "enum",
+                                  "member": "VERIFIED",
+                                  "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                },
+                                "units": {
+                                  "kind": "str",
+                                  "value": "1"
+                                }
+                              },
+                              "kind": "record",
+                              "type": "ops_sim.v5.provenance.ParameterProvenance"
+                            },
+                            "value": {
+                              "kind": "float",
+                              "value": "0x1.b775a84f3e128p-9"
+                            }
+                          },
+                          "kind": "record",
+                          "type": "ops_sim.v5.parameters.ScalarParameter"
+                        },
+                        "name": {
+                          "kind": "str",
+                          "value": "WGS84"
+                        }
+                      },
+                      "kind": "record",
+                      "type": "ops_sim.v5.orbit_config.ReferenceEllipsoid"
+                    },
+                    "kind": {
+                      "kind": "enum",
+                      "member": "MODEL_INERTIAL",
+                      "type": "ops_sim.v5.orbit_config.FrameKind"
+                    },
+                    "rotation": {
+                      "fields": {
+                        "angular_velocity_rad_per_s": {
+                          "fields": {
+                            "provenance": {
+                              "fields": {
+                                "classification": {
+                                  "kind": "enum",
+                                  "member": "PUBLIC_SPECIFICATION",
+                                  "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                },
+                                "derivation": {
+                                  "kind": "none"
+                                },
+                                "parameter_id": {
+                                  "fields": {
+                                    "value": {
+                                      "kind": "str",
+                                      "value": "orbit.rotation.angular-rate"
+                                    }
+                                  },
+                                  "kind": "record",
+                                  "type": "ops_sim.v5.ids.ParameterId"
+                                },
+                                "rationale": {
+                                  "kind": "none"
+                                },
+                                "sensitivity_range": {
+                                  "kind": "none"
+                                },
+                                "source_ids": {
+                                  "items": [
+                                    {
+                                      "fields": {
+                                        "value": {
+                                          "kind": "str",
+                                          "value": "nga-wgs84-defining-parameters"
+                                        }
+                                      },
+                                      "kind": "record",
+                                      "type": "ops_sim.v5.ids.SourceRecordId"
+                                    }
+                                  ],
+                                  "kind": "tuple"
+                                },
+                                "status": {
+                                  "kind": "enum",
+                                  "member": "VERIFIED",
+                                  "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                },
+                                "units": {
+                                  "kind": "str",
+                                  "value": "rad/s"
+                                }
+                              },
+                              "kind": "record",
+                              "type": "ops_sim.v5.provenance.ParameterProvenance"
+                            },
+                            "value": {
+                              "kind": "float",
+                              "value": "0x1.31da7d157db65p-14"
+                            }
+                          },
+                          "kind": "record",
+                          "type": "ops_sim.v5.parameters.ScalarParameter"
+                        },
+                        "epoch": {
+                          "fields": {
+                            "fractional_day": {
+                              "kind": "float",
+                              "value": "0x1.0000000000000p-1"
+                            },
+                            "julian_day": {
+                              "kind": "int",
+                              "value": "2461314"
+                            }
+                          },
+                          "kind": "record",
+                          "type": "ops_sim.v5.orbit_config.TTEpoch"
+                        },
+                        "initial_phase_rad": {
+                          "fields": {
+                            "provenance": {
+                              "fields": {
+                                "classification": {
+                                  "kind": "enum",
+                                  "member": "EXPLICIT_MODEL_ASSUMPTION",
+                                  "type": "ops_sim.v5.provenance.ProvenanceClass"
+                                },
+                                "derivation": {
+                                  "kind": "none"
+                                },
+                                "parameter_id": {
+                                  "fields": {
+                                    "value": {
+                                      "kind": "str",
+                                      "value": "orbit.rotation.initial-phase"
+                                    }
+                                  },
+                                  "kind": "record",
+                                  "type": "ops_sim.v5.ids.ParameterId"
+                                },
+                                "rationale": {
+                                  "kind": "str",
+                                  "value": "Synthetic Task 06A enclosure pilot input"
+                                },
+                                "sensitivity_range": {
+                                  "kind": "none"
+                                },
+                                "source_ids": {
+                                  "items": [],
+                                  "kind": "tuple"
+                                },
+                                "status": {
+                                  "kind": "enum",
+                                  "member": "VERIFIED",
+                                  "type": "ops_sim.v5.provenance.ProvenanceStatus"
+                                },
+                                "units": {
+                                  "kind": "str",
+                                  "value": "rad"
+                                }
+                              },
+                              "kind": "record",
+                              "type": "ops_sim.v5.provenance.ParameterProvenance"
+                            },
+                            "value": {
+                              "kind": "float",
+                              "value": "0x0.0p+0"
+                            }
+                          },
+                          "kind": "record",
+                          "type": "ops_sim.v5.parameters.ScalarParameter"
+                        }
+                      },
+                      "kind": "record",
+                      "type": "ops_sim.v5.orbit_config.UniformRotationDefinition"
+                    }
+                  },
+                  "kind": "record",
+                  "type": "ops_sim.v5.orbit_config.FrameDefinition"
+                }
+              ],
+              [
+                "interpolation",
+                {
+                  "kind": "str",
+                  "value": "LINEAR_POSITION_V1"
+                }
+              ],
+              [
+                "provenance",
+                {
+                  "items": [
+                    [
+                      "accuracy_policy",
+                      {
+                        "kind": "str",
+                        "value": "UNQUANTIFIED"
+                      }
+                    ],
+                    [
+                      "accuracy_statement",
+                      {
+                        "kind": "str",
+                        "value": "No uniform ephemeris/interpolation/time-conversion error bound. Midpoint checks are same-source consistency only."
+                      }
+                    ],
+                    [
+                      "alignment",
+                      {
+                        "kind": "str",
+                        "value": "ASSUMED_ICRF_MODEL_IDENTITY"
+                      }
+                    ],
+                    [
+                      "alignment_rationale",
+                      {
+                        "kind": "str",
+                        "value": "Explicit fixed identity alignment ICRF to these model axes; no verified Earth orientation. Phase zero is an assumption."
+                      }
+                    ],
+                    [
+                      "axes",
+                      {
+                        "kind": "str",
+                        "value": "ICRF"
+                      }
+                    ],
+                    [
+                      "center",
+                      {
+                        "kind": "str",
+                        "value": "500@399"
+                      }
+                    ],
+                    [
+                      "conversion",
+                      {
+                        "kind": "str",
+                        "value": "EXACT_KM_TIMES_1000"
+                      }
+                    ],
+                    [
+                      "correction",
+                      {
+                        "kind": "str",
+                        "value": "GEOMETRIC"
+                      }
+                    ],
+                    [
+                      "ephemeris_id",
+                      {
+                        "kind": "str",
+                        "value": "DE441"
+                      }
+                    ],
+                    [
+                      "reference_plane",
+                      {
+                        "kind": "str",
+                        "value": "FRAME"
+                      }
+                    ],
+                    [
+                      "request_sha256",
+                      {
+                        "kind": "str",
+                        "value": "33b593b3f23ec78549601cd0fed6c632d8dbba273294469e24f2907e24a81db6"
+                      }
+                    ],
+                    [
+                      "response_sha256",
+                      {
+                        "kind": "str",
+                        "value": "421642fcb686c33e37a3c78ad8eef4fa4aafaf3bc52add81fe4ebc3c9002b3c5"
+                      }
+                    ],
+                    [
+                      "retrieved_utc",
+                      {
+                        "kind": "str",
+                        "value": "2026-10-01T08:22:17.552137+00:00"
+                      }
+                    ],
+                    [
+                      "source_ids",
+                      {
+                        "items": [
+                          {
+                            "fields": {
+                              "value": {
+                                "kind": "str",
+                                "value": "jpl-horizons-sun-de441-20261001"
+                              }
+                            },
+                            "kind": "record",
+                            "type": "ops_sim.v5.ids.SourceRecordId"
+                          }
+                        ],
+                        "kind": "tuple"
+                      }
+                    ],
+                    [
+                      "source_kind",
+                      {
+                        "kind": "str",
+                        "value": "HORIZONS"
+                      }
+                    ],
+                    [
+                      "source_timescale",
+                      {
+                        "kind": "str",
+                        "value": "TT"
+                      }
+                    ],
+                    [
+                      "source_units",
+                      {
+                        "kind": "str",
+                        "value": "KM"
+                      }
+                    ],
+                    [
+                      "source_uri",
+                      {
+                        "kind": "str",
+                        "value": "https://ssd.jpl.nasa.gov/api/horizons.api"
+                      }
+                    ],
+                    [
+                      "target",
+                      {
+                        "kind": "str",
+                        "value": "10"
+                      }
+                    ]
+                  ],
+                  "kind": "map"
+                }
+              ],
+              [
+                "samples",
+                {
+                  "items": [
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x0.0p+0"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.14a694a408a4bp+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.0a2e4166c7d27p+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.cd73d3d4c7829p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    },
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x1.c200000000000p+11"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.149f1b11c03a6p+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.0ba0e94a2ec6cp+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.cff6863e20218p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    },
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x1.c200000000000p+12"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.1497983ee57f3p+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.0d13888f1a080p+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.d27929e3996d4p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    },
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x1.5180000000000p+13"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.14900c2b81329p+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.0e861f29856e0p+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.d4fbbeb052fe9p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    },
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x1.c200000000000p+13"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.148876d79c371p+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.0ff8ad0d69a05p+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.d77e448f658f0p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    },
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x1.1940000000000p+14"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.1480d8433f8cbp+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.116b322ebd4dep+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.da00bb6be5192p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    },
+                    {
+                      "items": [
+                        [
+                          "elapsed_seconds",
+                          {
+                            "kind": "float",
+                            "value": "0x1.5180000000000p+14"
+                          }
+                        ],
+                        [
+                          "position_m",
+                          {
+                            "items": [
+                              {
+                                "kind": "float",
+                                "value": "-0x1.1479306e74571p+37"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.12ddae8174573p+34"
+                              },
+                              {
+                                "kind": "float",
+                                "value": "-0x1.dc832330df633p+32"
+                              }
+                            ],
+                            "kind": "tuple"
+                          }
+                        ]
+                      ],
+                      "kind": "map"
+                    }
+                  ],
+                  "kind": "tuple"
+                }
+              ]
+            ],
+            "kind": "map"
+          }
+        ]
+      ],
+      "kind": "map"
+    },
+    "version": 1
+  },
+  "boundary": {
+    "common_authority_digest": "2f3cfd75140376f4d9825d7dfb50ac237678587a9eaccfec03d25f2ed992c3ef",
+    "direction": 1,
+    "elapsed_seconds": {
+      "denominator_hex": "0x1",
+      "numerator_hex": "0x43e2"
+    },
+    "id": 3450,
+    "parent_step_id": 3449,
+    "state_bounds": [
+      [
+        "6091780.1335171772784214726139939252984473820024188",
+        "7451002.6649283140266727771997999926371680314626011"
+      ],
+      [
+        "745730.92620457681064866939195672508900900533315510",
+        "1738922.7228856142323098420671636952590120335047193"
+      ],
+      [
+        "784743.18755297289544919879345325283490399105910272",
+        "1511836.4906244386141916447216352976778306323831459"
+      ],
+      [
+        "-3452.1965113000547723606481503870439874134927118077",
+        "-320.89500076320017090607408089456622184110790697707"
+      ],
+      [
+        "5132.8663214898162605494545974779364692036921881777",
+        "6571.3554657804074559107194656743319896325327440009"
+      ],
+      [
+        "3792.2617876284574765503688352033048137966752006016",
+        "4854.9436366668095995930776159491619702882517913894"
+      ]
+    ]
+  },
+  "local_step_seconds": 5,
+  "local_absolute_span_seconds": [
+    17378,
+    17383
+  ],
+  "units": [
+    "m",
+    "m",
+    "m",
+    "m/s",
+    "m/s",
+    "m/s"
+  ]
+}

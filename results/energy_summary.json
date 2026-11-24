@@ -1,0 +1,78 @@
+{
+  "D1": {
+    "progress_samples": 30602,
+    "checkpoint_records": 385,
+    "unique_checkpoint_clocks": 277,
+    "energy_start_Wh": 80.0,
+    "energy_end_Wh": 98.33176293737914,
+    "minimum_Wh_in_sparse_samples_only": 47.55493948159588,
+    "temperature_max_degC_from_cumulative_progress_fields": {
+      "battery": 26.850000000000023,
+      "bus": 31.71669523728781,
+      "payload": 26.857250071351586
+    },
+    "service_interruptions": 0,
+    "service_durations_s": {
+      "NORMAL": 7776000.0,
+      "POWER_OFF": 0.0,
+      "RECOVERY": 0.0,
+      "SAFE": 0.0
+    },
+    "solar_hold_s": 191496.0,
+    "positive_charge_while_solar_hold_s": 133874.0,
+    "solar_point_attempts": 59,
+    "solar_point_completions": 59
+  },
+  "D2": {
+    "progress_samples": 9908,
+    "checkpoint_records": 269,
+    "unique_checkpoint_clocks": 200,
+    "energy_start_Wh": 40.0,
+    "energy_end_Wh": 43.933981572305676,
+    "minimum_Wh_in_sparse_samples_only": 23.229448873200813,
+    "temperature_max_degC_from_cumulative_progress_fields": {
+      "battery": 31.56909171318324,
+      "bus": 39.004646031571895,
+      "payload": 30.97096944458849
+    },
+    "service_interruptions": 0,
+    "service_durations_s": {
+      "NORMAL": 7776000.0,
+      "POWER_OFF": 0.0,
+      "RECOVERY": 0.0,
+      "SAFE": 0.0
+    },
+    "solar_hold_s": 316086.0,
+    "positive_charge_while_solar_hold_s": 202453.0,
+    "solar_point_attempts": 76,
+    "solar_point_completions": 76
+  },
+  "paired_day_end_count": 70,
+  "paired_temperature_difference_D2_minus_D1_degC": {
+    "battery": {
+      "min": 8.480361108483407,
+      "median": 15.210211792603445,
+      "max": 15.741619699884325,
+      "D2_warmer": 70
+    },
+    "bus": {
+      "min": 6.28805686536964,
+      "median": 7.695021637118373,
+      "max": 8.722293449371023,
+      "D2_warmer": 70
+    },
+    "payload": {
+      "min": 3.9089808556687444,
+      "median": 5.266648772286288,
+      "max": 5.712090401697139,
+      "D2_warmer": 70
+    }
+  },
+  "D1_reported_energy_balance": {
+    "contiguous_days": 90,
+    "bus_max_daily_abs_residual_Wh": 3.1682713509480276e-14,
+    "storage_max_daily_abs_residual_Wh": 4.579722371682898e-13,
+    "endpoint_max_daily_abs_residual_Wh": 0.0,
+    "minimum_energy_reported_Wh": 47.503649908436934
+  }
+}

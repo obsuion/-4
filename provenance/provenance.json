@@ -1,0 +1,70 @@
+{
+  "original_inputs": {
+    "D1_BALANCED": {
+      "filename": "../examples/inputs/D1_BALANCED.json",
+      "sha256": "8351dc53f2286fe926101878aa7df961bcc7395083dcd6f17ec895ed225469df",
+      "bytes": 239542,
+      "data_binding": "d870de7306e6ad34357beaabc72faf591c25cc456da4fc8dc3918f6b0e480da0",
+      "prepare_profile": "P64",
+      "input_format": "B61_EXPLICIT_ENVIRONMENT_AGEING_INPUT_V7",
+      "conceptual_start_s": 128,
+      "conceptual_end_s": 7776128,
+      "model_days": 90.0,
+      "offered_requests": 8640,
+      "credited_request_ids": 36,
+      "accepted_segments": 54,
+      "events": 209417,
+      "raw_event_archive_sha256": "e604c1695ee26b7c38f5906f184947a7b573467ee266ed6aab2b938ea49b540e"
+    },
+    "D2_LIGHT": {
+      "filename": "../examples/inputs/D2_LIGHT.json",
+      "sha256": "96fae2916b2f7ccab61009bd890b2bf0276653cdb2a9f76111ae594998ed3f0e",
+      "bytes": 237152,
+      "data_binding": "fdf162ed0ff6c5c19f8a34545ae117d75c9b58db915f61fa4b40b27ce6668f32",
+      "prepare_profile": "P64",
+      "input_format": "B61_EXPLICIT_ENVIRONMENT_AGEING_INPUT_V7",
+      "conceptual_start_s": 128,
+      "conceptual_end_s": 7776128,
+      "model_days": 90.0,
+      "offered_requests": 8640,
+      "credited_request_ids": 35,
+      "accepted_segments": 35,
+      "events": 209215,
+      "raw_event_archive_sha256": "d051381fe005d603cc535350948de3f25f440e1a40126e0b6a13087728e6aa49"
+    }
+  },
+  "input_preparation_core": {
+    "source_identity": "ab86407efa08a55037e27e5469fd2141e51b328397669fe665356a63a346f478",
+    "review_zip_sha256": "5ffddb9022c25e6a51917a12f9ebe25829a818fafbb6e7b5c8868ed5a849712b"
+  },
+  "d1_final_review": {
+    "source_epoch_campaign": "b13713f0d828ecb4f8de926485de4be09d0325ea5b26519078ae4ee4ec7c87ab",
+    "campaign_source_files": 519,
+    "summary_zip_sha256": "a774c51b975755340eaa66077d786fd237c6432d83ae6610fb014165ebb035f6",
+    "archived_core_control_28_execution_source_identity": "f12b001940559ff541d30f0070cfde9fd15b9f89a4b52ff3c84058a50ba79ab0",
+    "unchanged_science_file_sha256": {
+      "ops_sim/v5/lifecycle_world.py": "f580e843219ba27fc2bca66420292057a6936d028320580182f1b03ccd448ba5",
+      "ops_sim/v5/lifecycle_physics.py": "f30829cd882661156dd5aa45ff62c2b3dccf6ad51663c9eb9322796cfb71899e",
+      "ops_sim/v5/lifecycle_execution.py": "76b0ccc37ad415bdce8f42f84383967b15d49ed260560691a2026881bc3d989f",
+      "ops_sim/v5/ms_product.py": "137a90787366d5c6ee0550b0d52b440bad0d7123c5f593127171792cf40a91bf"
+    },
+    "changed_runtime_module_paths_relative_to_preparation": [
+      "ops_sim/v5/control_compat.py",
+      "ops_sim/v5/lifecycle_application.py",
+      "ops_sim/v5/lifecycle_backend.py",
+      "ops_sim/v5/lifetime_campaign.py",
+      "ops_sim/v5/lifetime_failed_review.py",
+      "ops_sim/v5/lifetime_incremental_pool.py",
+      "ops_sim/v5/lifetime_journal.py",
+      "ops_sim/v5/lifetime_packed_status.py",
+      "ops_sim/v5/lifetime_physical_storage.py",
+      "ops_sim/v5/lifetime_policy.py",
+      "ops_sim/v5/lifetime_status.py",
+      "ops_sim/v5/lifetime_supervisor.py",
+      "ops_sim/v5/lifetime_typed_portable.py",
+      "ops_sim/v5/lifetime_unsubmitted.py",
+      "ops_sim/v5/spacecraft_project.py",
+      "ops_sim/v5/year_project.py"
+    ]
+  }
+}

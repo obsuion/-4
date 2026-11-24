@@ -1,0 +1,219 @@
+"""Version-1 typed canonical content for the explicitly allowlisted V5 graph.
+
+Finite built-in floats use exact binary64 hex; ints use exact decimal strings;
+Fraction uses its reduced numerator/positive denominator. Types and signed zero
+are preserved. Text is exact Unicode scalar content, with no normalization.
+Mappings have exact string keys and sort by Unicode code point; tuples and lists
+are distinct and ordered. Decoding only calls pinned validated constructors.
+"""
+
+from dataclasses import fields
+from fractions import Fraction
+import hashlib
+import json
+from math import isfinite
+
+from ._experiment_types import ENUM_TYPES, RECORD_FIELDS
+
+
+CANONICAL_VERSION = 1
+_RECORDS = {owner.__module__ + "." + owner.__name__: owner for owner in RECORD_FIELDS}
+_ENUMS = {owner.__module__ + "." + owner.__name__: owner for owner in ENUM_TYPES}
+
+
+def object_fields(value, names):
+    if type(value) is not dict or any(type(k) is not str for k in value):
+        raise TypeError("expected an object with exact string keys")
+    if set(value) != set(names):
+        raise ValueError("missing or unknown fields")
+    return value
+
+
+def _text(value):
+    if type(value) is not str:
+        raise TypeError("expected exact text")
+    value.encode("utf-8", errors="strict")
+    return value
+
+
+def _check_schema_coverage_reference():
+    """Fail closed when an allowlisted owner changes its persisted field graph."""
+    for owner, names in RECORD_FIELDS.items():
+        actual = fields(owner)
+        if tuple(f.name for f in actual) != names or any(not f.init for f in actual):
+            raise ValueError(f"unreviewed canonical field schema: {owner.__name__}")
+
+
+def _encode_reference(value):
+    owner = type(value)
+    if value is None:
+        return {"kind": "none"}
+    if owner is bool:
+        return {"kind": "bool", "value": value}
+    if owner is int:
+        return {"kind": "int", "value": str(value)}
+    if owner is float:
+        if not isfinite(value):
+            raise ValueError("non-finite canonical number")
+        return {"kind": "float", "value": value.hex()}
+    if owner is Fraction:
+        return {"kind": "fraction", "numerator": str(value.numerator), "denominator": str(value.denominator)}
+    if owner is str:
+        return {"kind": "str", "value": _text(value)}
+    if owner in (tuple, list):
+        return {"kind": "tuple" if owner is tuple else "list", "items": [_encode(x) for x in value]}
+    if owner is dict:
+        for key in value:
+            _text(key)
+        return {"kind": "map", "items": [[key, _encode(value[key])] for key in sorted(value)]}
+    name = owner.__module__ + "." + owner.__name__
+    if owner in ENUM_TYPES:
+        if value is not owner.__members__.get(value.name):
+            raise ValueError("invalid enum member")
+        return {"kind": "enum", "type": name, "member": value.name}
+    if owner in RECORD_FIELDS:
+        return {"kind": "record", "type": name,
+                "fields": {field: _encode(getattr(value, field)) for field in RECORD_FIELDS[owner]}}
+    raise TypeError(f"unsupported canonical type: {name}")
+
+
+def _integer(value):
+    _text(value)
+    number = int(value)
+    if str(number) != value:
+        raise ValueError("noncanonical integer")
+    return number
+
+
+def _decode_reference(value):
+    if type(value) is not dict or type(value.get("kind")) is not str:
+        raise TypeError("expected tagged canonical object")
+    kind = value["kind"]
+    if kind == "none":
+        object_fields(value, ("kind",))
+        return None
+    if kind in ("bool", "str", "int", "float"):
+        object_fields(value, ("kind", "value"))
+        x = value["value"]
+        if kind == "bool":
+            if type(x) is not bool:
+                raise TypeError("expected exact bool")
+            return x
+        if kind == "str":
+            return _text(x)
+        if kind == "int":
+            return _integer(x)
+        result = float.fromhex(_text(x))
+        if not isfinite(result) or result.hex() != x:
+            raise ValueError("noncanonical or non-finite float")
+        return result
+    if kind == "fraction":
+        object_fields(value, ("kind", "numerator", "denominator"))
+        numerator, denominator = _integer(value["numerator"]), _integer(value["denominator"])
+        if denominator <= 0:
+            raise ValueError("fraction denominator must be positive")
+        result = Fraction(numerator, denominator)
+        if result.numerator != numerator or result.denominator != denominator:
+            raise ValueError("fraction must be reduced")
+        return result
+    if kind in ("tuple", "list", "map"):
+        object_fields(value, ("kind", "items"))
+        items = value["items"]
+        if type(items) is not list:
+            raise TypeError("canonical items must be a list")
+        if kind == "map":
+            result = {}
+            for item in items:
+                if type(item) is not list or len(item) != 2:
+                    raise ValueError("invalid map item")
+                key = _text(item[0])
+                if key in result:
+                    raise ValueError("duplicate map key")
+                result[key] = _decode(item[1])
+            if list(result) != sorted(result):
+                raise ValueError("noncanonical map key order")
+            return result
+        result = [_decode(x) for x in items]
+        return tuple(result) if kind == "tuple" else result
+    if kind == "enum":
+        object_fields(value, ("kind", "type", "member"))
+        owner = _ENUMS.get(_text(value["type"]))
+        member = _text(value["member"])
+        if owner is None or member not in owner.__members__:
+            raise ValueError("unknown enum type/member")
+        return owner[member]
+    if kind == "record":
+        object_fields(value, ("kind", "type", "fields"))
+        owner = _RECORDS.get(_text(value["type"]))
+        if owner is None:
+            raise ValueError("unknown record type")
+        content = object_fields(value["fields"], RECORD_FIELDS[owner])
+        return owner(**{name: _decode(content[name]) for name in RECORD_FIELDS[owner]})
+    raise ValueError("unknown canonical kind")
+
+
+def canonical_content(value):
+    """Encode and revalidate every nested owner; reject constructor normalization drift."""
+    check_schema_coverage()
+    encoded = _encode(value)
+    if _encode(_decode(encoded)) != encoded:
+        raise ValueError("input graph is not in its constructor-normalized representation")
+    return encoded
+
+
+def decode_content(payload):
+    check_schema_coverage()
+    result = _decode(payload)
+    if _encode(result) != payload:
+        raise ValueError("noncanonical content")
+    return result
+
+
+def canonical_copy(value):
+    return decode_content(canonical_content(value))
+
+
+def json_text(value):
+    return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+
+
+def parse_json(text):
+    _text(text)
+
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            if key in result:
+                raise ValueError("duplicate JSON key")
+            result[key] = value
+        return result
+
+    def invalid_constant(value):
+        raise ValueError("non-finite JSON constant")
+
+    return json.loads(text, object_pairs_hook=pairs, parse_constant=invalid_constant)
+
+
+def content_digest(domain, value):
+    """SHA-256 of UTF-8 canonical typed content, domain and canonical version."""
+    envelope = {"domain": _text(domain), "canonical_version": CANONICAL_VERSION,
+                "content": canonical_content(value)}
+    return hashlib.sha256(json_text(envelope).encode("utf-8")).hexdigest()
+
+
+__all__ = ["CANONICAL_VERSION", "canonical_content", "decode_content", "canonical_copy",
+           "content_digest", "check_schema_coverage"]
+
+
+# Invocation-scoped exact compiled loops; no graph/result cache.
+def _encode(value):
+    from .metadata_codec import canonical_encode
+    return canonical_encode(value,_encode_reference,globals())
+
+def _decode(value):
+    from .metadata_codec import canonical_decode
+    return canonical_decode(value,_decode_reference,globals())
+
+def check_schema_coverage():
+    from .metadata_codec import canonical_schema
+    return canonical_schema(RECORD_FIELDS,fields,_check_schema_coverage_reference)

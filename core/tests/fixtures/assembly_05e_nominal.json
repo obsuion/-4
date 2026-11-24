@@ -1,0 +1,210 @@
+{
+  "provenance": {
+    "study": "accepted Task 05E nominal allocation table; copied values, not recomputed expectations",
+    "protocol_sha256": "b79dee06ef2b62cb2414212770e3afe8bbb94f40c137c10f6be7981fe24feed7",
+    "designs_csv_sha256": "98c7e156cafbae953026e3d8c9235bf7b1188cf76586c1c4996cca17224d9e8d",
+    "fields": "designs[] in protocol.json; mass, inertia, acceptance and reasons cross-checked against designs.csv"
+  },
+  "allocations": [
+    {
+      "design_id": "B2-A2",
+      "packs": 2,
+      "arrays": 2,
+      "accepted": true,
+      "rejection_reasons": [],
+      "total_mass_kg": 73.6621248,
+      "center_of_mass_m": [
+        0.0,
+        -0.005277754681331158,
+        0.0
+      ],
+      "inertia_y_kg_m2": 10.767431443740001,
+      "component_count": 38
+    },
+    {
+      "design_id": "B4-A2",
+      "packs": 4,
+      "arrays": 2,
+      "accepted": true,
+      "rejection_reasons": [],
+      "total_mass_kg": 74.6741248,
+      "center_of_mass_m": [
+        0.0,
+        -0.008988530174243167,
+        0.0
+      ],
+      "inertia_y_kg_m2": 10.780493885646669,
+      "component_count": 42
+    },
+    {
+      "design_id": "B6-A2",
+      "packs": 6,
+      "arrays": 2,
+      "accepted": true,
+      "rejection_reasons": [],
+      "total_mass_kg": 75.6861248,
+      "center_of_mass_m": [
+        0.0,
+        -0.012600072027997396,
+        0.0
+      ],
+      "inertia_y_kg_m2": 10.803676327553335,
+      "component_count": 46
+    },
+    {
+      "design_id": "B8-A2",
+      "packs": 8,
+      "arrays": 2,
+      "accepted": true,
+      "rejection_reasons": [],
+      "total_mass_kg": 76.6981248,
+      "center_of_mass_m": [
+        0.0,
+        -0.016116308282937315,
+        0.0
+      ],
+      "inertia_y_kg_m2": 10.842038769460002,
+      "component_count": 50
+    },
+    {
+      "design_id": "B2-A4",
+      "packs": 2,
+      "arrays": 4,
+      "accepted": true,
+      "rejection_reasons": [],
+      "total_mass_kg": 76.2616576,
+      "center_of_mass_m": [
+        0.0,
+        -0.006492138560596931,
+        0.0
+      ],
+      "inertia_y_kg_m2": 11.961237164026668,
+      "component_count": 69
+    },
+    {
+      "design_id": "B4-A4",
+      "packs": 4,
+      "arrays": 4,
+      "accepted": true,
+      "rejection_reasons": [],
+      "total_mass_kg": 77.2736576,
+      "center_of_mass_m": [
+        0.0,
+        -0.010062177359649142,
+        0.0
+      ],
+      "inertia_y_kg_m2": 11.974299605933336,
+      "component_count": 73
+    },
+    {
+      "design_id": "B6-A4",
+      "packs": 6,
+      "arrays": 4,
+      "accepted": false,
+      "rejection_reasons": [
+        "total_mass_ceiling"
+      ],
+      "total_mass_kg": 78.2856576,
+      "center_of_mass_m": [
+        0.0,
+        -0.013539916256640095,
+        0.0
+      ],
+      "inertia_y_kg_m2": 11.997482047840002,
+      "component_count": 77
+    },
+    {
+      "design_id": "B8-A4",
+      "packs": 8,
+      "arrays": 4,
+      "accepted": false,
+      "rejection_reasons": [
+        "total_mass_ceiling"
+      ],
+      "total_mass_kg": 79.2976576,
+      "center_of_mass_m": [
+        0.0,
+        -0.016928889057121404,
+        0.0
+      ],
+      "inertia_y_kg_m2": 12.035844489746669,
+      "component_count": 81
+    },
+    {
+      "design_id": "B2-A6",
+      "packs": 2,
+      "arrays": 6,
+      "accepted": false,
+      "rejection_reasons": [
+        "stowed_panel_mount_count",
+        "string_route_shorter_than_installation_path",
+        "total_mass_ceiling"
+      ],
+      "total_mass_kg": 78.8611904,
+      "center_of_mass_m": [
+        0.0,
+        -0.007626462001770646,
+        0.0
+      ],
+      "inertia_y_kg_m2": 13.158225814553337,
+      "component_count": 100
+    },
+    {
+      "design_id": "B4-A6",
+      "packs": 4,
+      "arrays": 6,
+      "accepted": false,
+      "rejection_reasons": [
+        "stowed_panel_mount_count",
+        "string_route_shorter_than_installation_path",
+        "total_mass_ceiling"
+      ],
+      "total_mass_kg": 79.8731904,
+      "center_of_mass_m": [
+        0.0,
+        -0.011065939241610662,
+        0.0
+      ],
+      "inertia_y_kg_m2": 13.171288256460002,
+      "component_count": 104
+    },
+    {
+      "design_id": "B6-A6",
+      "packs": 6,
+      "arrays": 6,
+      "accepted": false,
+      "rejection_reasons": [
+        "stowed_panel_mount_count",
+        "string_route_shorter_than_installation_path",
+        "total_mass_ceiling"
+      ],
+      "total_mass_kg": 80.8851904,
+      "center_of_mass_m": [
+        0.0,
+        -0.014419350022324978,
+        0.0
+      ],
+      "inertia_y_kg_m2": 13.19447069836667,
+      "component_count": 108
+    },
+    {
+      "design_id": "B8-A6",
+      "packs": 8,
+      "arrays": 6,
+      "accepted": false,
+      "rejection_reasons": [
+        "stowed_panel_mount_count",
+        "string_route_shorter_than_installation_path",
+        "total_mass_ceiling"
+      ],
+      "total_mass_kg": 81.8971904,
+      "center_of_mass_m": [
+        0.0,
+        -0.017689884902327493,
+        0.0
+      ],
+      "inertia_y_kg_m2": 13.232833140273335,
+      "component_count": 112
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "source": "Shared projection of transitions 0\u201313 from D1-90D-EVENTS.zip and D2-90D-EVENTS.zip. Times are absolute model seconds.",
+  "events": [
+    {
+      "index": 0,
+      "kind": "POINT",
+      "start_seconds": 128,
+      "end_seconds": 136,
+      "request_id": "b53-common-study-0",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 1,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 136,
+      "end_seconds": 137,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 2,
+      "kind": "CAPTURE",
+      "start_seconds": 137,
+      "end_seconds": 141,
+      "request_id": "b53-common-study-0",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 3,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 141,
+      "end_seconds": 142,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 4,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 142,
+      "end_seconds": 188,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 5,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 188,
+      "end_seconds": 248,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 6,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 248,
+      "end_seconds": 249,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 7,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 249,
+      "end_seconds": 308,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 8,
+      "kind": "HOLD_UNTIL",
+      "start_seconds": 308,
+      "end_seconds": 368,
+      "request_id": "",
+      "status": "completed",
+      "actual_partial_bits": [],
+      "credits": []
+    },
+    {
+      "index": 9,
+      "kind": "CONTACT",
+      "start_seconds": 368,
+      "end_seconds": 369,
+      "request_id": "b53-common-study-0",
+      "status": "partial",
+      "actual_partial_bits": [
+        1000.0
+      ],
+      "credits": []
+    },
+    {
+      "index": 10,
+      "kind": "CONTACT",
+      "start_seconds": 369,
+      "end_seconds": 370,
+      "request_id": "b53-common-study-0",
+      "status": "partial",
+      "actual_partial_bits": [
+        2000.0
+      ],
+      "credits": []
+    },
+    {
+      "index": 11,
+      "kind": "CONTACT",
+      "start_seconds": 370,
+      "end_seconds": 374,
+      "request_id": "b53-common-study-0",
+      "status": "partial",
+      "actual_partial_bits": [
+        6000.0
+      ],
+      "credits": []
+    },
+    {
+      "index": 12,
+      "kind": "CONTACT",
+      "start_seconds": 374,
+      "end_seconds": 378,
+      "request_id": "b53-common-study-0",
+      "status": "partial",
+      "actual_partial_bits": [
+        10000.0
+      ],
+      "credits": []
+    },
+    {
+      "index": 13,
+      "kind": "CONTACT",
+      "start_seconds": 378,
+      "end_seconds": 382,
+      "request_id": "b53-common-study-0",
+      "status": "partial",
+      "actual_partial_bits": [],
+      "credits": [
+        {
+          "completion_time": [
+            "47536",
+            "125"
+          ],
+          "priority": 3.0,
+          "record_ids": [
+            "b44.b52-action-2"
+          ],
+          "released_at_seconds": 128,
+          "request_id": "b53-common-study-0",
+          "useful_bits": 12288
+        }
+      ]
+    }
+  ]
+}

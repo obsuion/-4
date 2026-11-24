@@ -1,0 +1,27 @@
+{
+  "format": "M1_ASSEMBLY_DOCUMENT",
+  "version": 1,
+  "units": {"mass": "kg", "length": "m", "inertia": "kg*m^2", "rotation": "dimensionless"},
+  "body_frame_id": "B",
+  "clearance_m": "0x0.0p+0",
+  "definitions": [
+    {"definition_id": "cube", "local_frame_id": "C", "mass_kg": "0x1.0000000000000p+0",
+     "size_m": ["0x1.0000000000000p+0", "0x1.0000000000000p+0", "0x1.0000000000000p+0"],
+     "center_local_m": ["0x0.0p+0", "0x0.0p+0", "0x0.0p+0"],
+     "mass_distribution": "ASSUMED_UNIFORM_CUBOID"}
+  ],
+  "instances": [{"instance_id": "instance-1", "definition_id": "cube", "mass_coverage": [["unit-1"]]}],
+  "choices": [
+    {"choice_id": "origin", "definition_id": "cube", "allowed_instance_ids": ["instance-1"],
+     "pose": {"mount_id": "mount", "choice_id": "origin", "body_frame_id": "B", "local_frame_id": "C",
+              "origin_body_m": ["0x0.0p+0", "0x0.0p+0", "0x0.0p+0"],
+              "rotation_body_from_local": [["0x1.0000000000000p+0", "0x0.0p+0", "0x0.0p+0"],
+                                            ["0x0.0p+0", "0x1.0000000000000p+0", "0x0.0p+0"],
+                                            ["0x0.0p+0", "0x0.0p+0", "0x1.0000000000000p+0"]],
+              "occupied_slots": ["slot-1"]},
+     "envelope": null, "allowed_region_id": null, "exclusive": true}
+  ],
+  "selections": [{"instance_id": "instance-1", "choice_id": "origin"}],
+  "allowed_regions": [],
+  "reserved_regions": []
+}

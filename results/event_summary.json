@@ -1,0 +1,135 @@
+{
+  "D1": {
+    "accepted_jobs": 54,
+    "credits": 36,
+    "curve_sample_info": 30602,
+    "events": 209417,
+    "expiry_counter": 8604,
+    "no_action_solar_seconds": {
+      "180": 198
+    },
+    "power_mode_seconds": {
+      "NORMAL": 7776000
+    },
+    "reason_event_counts": {
+      "ACQUISITION_VIEW_ENVELOPE_REFUSED": 372,
+      "STATION_GEOMETRY_OR_DECLARED_SERVICE_UNAVAILABLE": 15,
+      "TARGET_NOMINAL_SAMPLED_NOT_VISIBLE": 5,
+      "TARGET_POINTING_GEOMETRY_REFUSED": 8027
+    },
+    "request_groups": {
+      "ACQUISITION_VIEW_ENVELOPE_REFUSED": 372,
+      "CREDIT": 36,
+      "NO_ACTION": 198,
+      "STATION_GEOMETRY_OR_DECLARED_SERVICE_UNAVAILABLE": 2,
+      "TARGET_NOMINAL_SAMPLED_NOT_VISIBLE": 5,
+      "TARGET_POINTING_GEOMETRY_REFUSED": 8027
+    },
+    "requests_per_30d": [
+      12,
+      13,
+      11
+    ],
+    "sha256": "e604c1695ee26b7c38f5906f184947a7b573467ee266ed6aab2b938ea49b540e",
+    "solar_duration_s": {
+      "SOLAR_HOLD": 191496,
+      "SOLAR_POINT": 445
+    },
+    "unique_requests": 8640
+  },
+  "D2": {
+    "accepted_jobs": 35,
+    "credits": 35,
+    "curve_sample_info": 9908,
+    "events": 209215,
+    "expiry_counter": 8605,
+    "no_action_solar_seconds": {
+      "180": 341
+    },
+    "power_mode_seconds": {
+      "NORMAL": 7776000
+    },
+    "reason_event_counts": {
+      "ACQUISITION_VIEW_ENVELOPE_REFUSED": 359,
+      "STATION_GEOMETRY_OR_DECLARED_SERVICE_UNAVAILABLE": 15,
+      "TARGET_NOMINAL_SAMPLED_NOT_VISIBLE": 5,
+      "TARGET_POINTING_GEOMETRY_REFUSED": 7898
+    },
+    "request_groups": {
+      "ACQUISITION_VIEW_ENVELOPE_REFUSED": 359,
+      "CREDIT": 35,
+      "NO_ACTION": 341,
+      "STATION_GEOMETRY_OR_DECLARED_SERVICE_UNAVAILABLE": 2,
+      "TARGET_NOMINAL_SAMPLED_NOT_VISIBLE": 5,
+      "TARGET_POINTING_GEOMETRY_REFUSED": 7898
+    },
+    "requests_per_30d": [
+      12,
+      13,
+      10
+    ],
+    "sha256": "d051381fe005d603cc535350948de3f25f440e1a40126e0b6a13087728e6aa49",
+    "solar_duration_s": {
+      "SOLAR_HOLD": 316086,
+      "SOLAR_POINT": 534
+    },
+    "unique_requests": 8640
+  },
+  "transitions": [
+    {
+      "D1": "TARGET_POINTING_GEOMETRY_REFUSED",
+      "D2": "TARGET_POINTING_GEOMETRY_REFUSED",
+      "count": 7707
+    },
+    {
+      "D1": "ACQUISITION_VIEW_ENVELOPE_REFUSED",
+      "D2": "ACQUISITION_VIEW_ENVELOPE_REFUSED",
+      "count": 358
+    },
+    {
+      "D1": "TARGET_POINTING_GEOMETRY_REFUSED",
+      "D2": "NO_ACTION",
+      "count": 320
+    },
+    {
+      "D1": "NO_ACTION",
+      "D2": "TARGET_POINTING_GEOMETRY_REFUSED",
+      "count": 191
+    },
+    {
+      "D1": "CREDIT",
+      "D2": "CREDIT",
+      "count": 35
+    },
+    {
+      "D1": "ACQUISITION_VIEW_ENVELOPE_REFUSED",
+      "D2": "NO_ACTION",
+      "count": 14
+    },
+    {
+      "D1": "NO_ACTION",
+      "D2": "NO_ACTION",
+      "count": 6
+    },
+    {
+      "D1": "TARGET_NOMINAL_SAMPLED_NOT_VISIBLE",
+      "D2": "TARGET_NOMINAL_SAMPLED_NOT_VISIBLE",
+      "count": 5
+    },
+    {
+      "D1": "STATION_GEOMETRY_OR_DECLARED_SERVICE_UNAVAILABLE",
+      "D2": "STATION_GEOMETRY_OR_DECLARED_SERVICE_UNAVAILABLE",
+      "count": 2
+    },
+    {
+      "D1": "CREDIT",
+      "D2": "NO_ACTION",
+      "count": 1
+    },
+    {
+      "D1": "NO_ACTION",
+      "D2": "ACQUISITION_VIEW_ENVELOPE_REFUSED",
+      "count": 1
+    }
+  ]
+}
