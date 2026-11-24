@@ -1,4 +1,4 @@
-# C4 — Satellite Operations Simulator
+# C4 Satellite Operations Simulator TI-64
 
 I wrote this simulator with the assistance of Codex. The idea came from my internship at Kazakhstan Gharysh Sapary, where I worked with satellite imagery and a simplified spacecraft model. I wanted to follow one imaging request from the ground to the spacecraft and back, and see what could stop it along the way.
 
